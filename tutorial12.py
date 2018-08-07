@@ -1,12 +1,10 @@
 import re
 
 # Your code goes here
-functionList = dir(re)
-alphaFindList = []
+find_members = []
 
-for function in functionList:
-    if function.startswith('find'):
-        alphaFindList.append(function)
+for member in dir(re):
+    if "find" in member:
+        find_members.append(member)
 
-alphaFindList.sort()
-print(alphaFindList)
+print(sorted(find_members))
